@@ -1,0 +1,15 @@
+{
+  "name": "My Notebook",
+  "short_name": "Notebook",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAAxElEQVR42u3WsQ2CMBAG4J9CkJxgk2QkQwqgkJpQmQmQmQmQmQmQmQkFJm8o2z1p4p7m0s+g2mWgEAAAAAAAAAAAB4m8h4mP0nF3g2v1cZpQf2bP8m4tq+zjYw0r4fZ3oY0qV2oZ7l9w1bQWwQXl7m2iYp9m2xQm2l2y0B1o0m0v3e0m0mQfYk5wqk7k7aY2m1r4c+o8fYQAAAAAAAAAAAPgG7Cw9w0d6o0wAAAAASUVORK5CYII=",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}

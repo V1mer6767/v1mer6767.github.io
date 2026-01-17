@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111827" />
+    <title>My-Notebook</title>
+
+    <link rel="maifest" href="mainfest.json" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">📘</div>
+        </div>
+        <div class="title">My Notebook</div>
+        <div class="subtitle">Плани • Нотатки • Нагадування</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="btnNotify" class="btn ghost" title="Дозволити сповіщення">🔔</button>
+      <button id="btnExport" class="btn ghost" title="Експорт (JSON)">⬇️</button>
+      <label class="btn ghost file">
+        ⬆️
+        <input id="importFile" type="file" accept="application/json" />
+      </label>
+     </div>
+    </header>
+    
+    <main class="layout">
+     <aside class="sidebar">
+      <div class="card">
+        <div class="cardTitle">Розділи</div>
+        <div class="tabs">
+        <button class="tab active" data-tab="plans">Плани</button>
+        <button class="tab" data-tab="notes">Нотатки</button>
+        <button class="tab" data-tab="done">Виконано</button>
+      </div>
+       
+      <div class="search">
+        <input id="search" typr="next" placehoder="Пошук..."/>
+      </div>
+      
+      <div class="hint">
+        Порада: натисни на запис, щоб відкрити/редагувати.
+      </div>
+    </div>
+
+    <div class="card">
+        <div class="cardTitle">Нове</div>
+
+        <label class="field">
+          <span>Заголовок</span>
+          <input id="newTitle" type="text" placeholder="Напр. Контрольна з хімії" />
+        </label>
+
+    <label class="field">
+        <span>Текст</span>
+          <textarea id="newBody" rows="4" placeholder="Що треба зробити..."></textarea>
+    </label>
+
+    <label class="field">
+          <span>Нагадати (опційно)</span>
+          <input id="newRemindAt" type="datetime-local" />
+        </label>
+        
+        <div class="row">
+          <select id="newType" class="select">
+            <option value="plans">Плани</option>
+            <option value="notes">Нотатки</option>
+          </select>
+          <button id="btnAdd" class="btn primary">Додати</button>
+        </div>
+         
+         <div class="small">
+          Нагадування можуть залежати від браузера/режиму енергозбереження.
+        </div>
+      </div>
+    </aside>
+    <section class="content">
+      <div class="paper">
+        <div class="paperHeader">
+          <div>
+            <div id="viewTitle" class="paperTitle">Вибери запис</div>
+            <div id="viewMeta" class="paperMeta">Тут буде деталі</div>
+          </div>
+          <div class="paperButtons">
+            <button id="btnMarkDone" class="btn">✅ Виконано</button>
+            <button id="btnDelete" class="btn danger">🗑️ Видалити</button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="list" class="list"></div>
+
+        <div class="divider"></div>
+
+        <div class="editor">
+          <div class="editorTitle">Редактор</div>
+
+          <label class="field">
+            <span>Заголовок</span>
+            <input id="editTitle" type="text" disabled />
+          </label>
+
+          <label class="field">
+            <span>Текст</span>
+            <textarea id="editBody" rows="8" disabled></textarea>
+          </label>
+
+          <label class="field">
+            <span>Нагадати</span>
+            <input id="editRemindAt" type="datetime-local" disabled />
+          </label>
+
+          <div class="row">
+            <button id="btnSave" class="btn primary" disabled>Зберегти</button>
+            <button id="btnCancel" class="btn" disabled>Скасувати</button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        Працює офлайн • Дані зберігаються на твоєму пристрої
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+    <label class="field"
